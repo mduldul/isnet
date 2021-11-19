@@ -3,18 +3,23 @@ import styles from './navbar.module.css'
 import cn from 'classnames'
 
 export default function Navbar() {
-    React.useEffect(() => {
-        const btn = document.querySelector("button.mobileButton");
-        const menu = document.querySelector("#mobileMenu");
-        const navbar = document.querySelector("#navbar");
+    // React.useEffect(() => {
+    //     const btn = document.querySelector("button.mobileButton");
+    //     const menu = document.querySelector("#mobileMenu");
+    //     const navbar = document.querySelector("#navbar");
 
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    }, [])
+    //     btn.addEventListener("click", () => {
+    //         menu.classList.toggle("hidden");
+    //     });
+    // }, [])
     return (
         <nav>
-            <div className="w-full flex lg:flex-nowrap md:flex-nowrap sm:flex-wrap flex-wrap justify-between m-0 p-0" id="navbar">
+
+
+        </nav>
+    )
+}
+{/* <div className="w-full flex lg:flex-nowrap md:flex-nowrap sm:flex-wrap flex-wrap justify-between m-0 p-0" id="navbar">
                 <div className="flex w-full justify-between">
                     <div className="w-52">
                         <img src="/isnet_logo.png" className="p-4" />
@@ -40,7 +45,4 @@ export default function Navbar() {
                         <li className="flex"><a href="" className={styles.buttonSecondary}>ONLİNEİŞLEMLER</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    )
-}
+            </div> */}
