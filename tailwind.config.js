@@ -25,8 +25,11 @@ module.exports = {
       'veri-guvenligi': "url('/slider_bg/veri-guvenliginizi-kvkk-cozumlerimizle-saglayin.jpeg')"
     },
     extend: {
+      width: {
+        145: '145%',
+      },
       height: {
-        slider: '600px',
+        slider: '600px'
       },
       fontFamily: {
         Montserrat: ['Montserrat']
