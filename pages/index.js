@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar/navbar.js'
+import Navigation from '../components/navbar/navigation.js'
 import Slider from '../components/slider/slider.js'
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navigation/>
       <Slider />
     </div >
   )
