@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Row } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
@@ -34,11 +35,12 @@ const newsList = [
         img: '/news_slider/isnet-news-img.png'
     }
 ]
+
 export default function News() {
     return (
         <Container fluid>
             <Row>
-                <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 after:w-11/12 after:bg-gray-200 after:h-1 after:absolute after:mt-3 after:ml-8">BİZDEN HABERLER</span>
+                <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">BİZDEN HABERLER</span>
             </Row>
             <Swiper slidesPerView={3} spaceBetween={30} pagination={{ "clickable": true }}>
                 {newsList.map((item) => (
