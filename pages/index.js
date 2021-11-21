@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Features from '../components/features/features.js'
 import Navbar from '../components/navbar/navbar.js'
 import Navigation from '../components/navbar/navigation.js'
+import News from '../components/news/news.js'
 import Slider from '../components/slider/slider.js'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Navigation />
       <Slider />
       <Features />
+      <News />
     </div >
   )
 }
