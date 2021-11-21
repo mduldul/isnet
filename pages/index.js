@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-      {/* <Navbar /> */}
       <Navigation />
       <Slider />
       <Features />
