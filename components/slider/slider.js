@@ -65,14 +65,14 @@ export default function Slider() {
     ]
     return (
         <>
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
             <Swiper navigation={true} loop={true} className="lg:w-full md:w-145 z-0">
                 {sliderList.map((value, index, arr) => (
                     <SwiperSlide key={value.Id} >
-                        <div className={classNames("w-full flex h-slider bg-cover", value.bg)}>
+                        <div className={classNames("w-full flex h-slider bg-cover bg-no-repeat bg-center", value.bg)}>
                             <div className="relative self-center flex justify-center">
                                 <div className="w-7/12 text-center">
-                                    <h2 className={"text-5xl text-white leading-tight font-Montserrat"} style={{ textShadow: "3px 2px 1px #000" }}>
+                                    <h2 className={"md:text-5xl xs:text-3xl text-white leading-tight font-Montserrat"} style={{ textShadow: "3px 2px 1px #000" }}>
                                         {value.text}
                                     </h2>
                                 </div>
