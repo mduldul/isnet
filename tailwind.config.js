@@ -33,6 +33,14 @@ module.exports = {
       },
       fontFamily: {
         Montserrat: ['Montserrat']
+      },
+      textColor: {
+        'featureIconBlue': '#2574A9',
+        'featureTextBlue': '#044A67',
+      },
+      backgroundColor: {
+        'featureBgGray': '#f0f0f0',
+        'featureBgBlue': '#2574A9'
       }
     },
   },
