@@ -18,16 +18,16 @@ export default function Suggestion({ contentList, headerText }) {
                 <Swiper slidesPerView={1} spaceBetween={30} pagination={{ "clickable": true }}>
                     {contentList.map((item, index) => (
                         <SwiperSlide key={index} className="mb-8">
-                            <Grid.Container>
+                            <Grid.Container justify="center">
                                 <Grid sm={3} md={2}>
                                     <div className="pt-3 ml-5">
                                         <div>
-                                            <img src={item.profileImg} className="w-60" />
+                                            <img src={item.profileImg} className="lg:w-60 xs:w-80" />
                                         </div>
                                     </div>
                                 </Grid>
                                 <Grid sm={6} md={8}>
-                                    <div className="flex-col">
+                                    <div className="flex-col xs:mx-10 text-justify">
                                         <div className="pt-5">
                                             <span className="font-Montserrat text-xl font-bold text-featureTextBlue">{item.name}</span>
                                         </div>
