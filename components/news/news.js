@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useCallback, useEffect } from 'react';
 import { Container, Row } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
@@ -36,40 +37,66 @@ const newsList = [
     }
 ]
 
-export default function News() {
-    return (
-        <Container fluid>
-            <Row>
-                <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">BİZDEN HABERLER</span>
-            </Row>
-            <Swiper slidesPerView={3} spaceBetween={30} pagination={{ "clickable": true }}>
-                {newsList.map((item) => (
-                    <SwiperSlide>
-                        <div className="p-5">
-                            <Row>
-                                <a href="#" className="flex">
-                                    <div>
-                                        <img src={item.img} className="transition hover:scale-50 ease-in" />
-                                    </div>
-                                </a>
-                            </Row>
-                            <Row>
-                                <div className="mt-3">
-                                    <span className="text-featureTextBlue font-Montserrat font-bold text-xl">{item.title}</span>
-                                </div>
-                            </Row>
-                            <Row>
-                                <div className="mt-3">
-                                    <p className="text-gray-600 font-Montserrat text-sm font-medium">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </Row>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+const useMediaQuery = (width) => {
+    const [targetReached, setTargetReached] = useState(false);
 
-        </Container>
+    const updateTarget = useCallback((e) => {
+        if (e.matches) {
+            setTargetReached(true);
+        } else {
+            setTargetReached(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        const media = window.matchMedia(`(max-width: ${width}px)`);
+        media.addListener(updateTarget);
+
+        if (media.matches) {
+            setTargetReached(true);
+        }
+
+        return () => media.removeListener(updateTarget);
+    }, []);
+
+    return targetReached;
+};
+export default function News() {
+    const sm = useMediaQuery(425);
+    return (
+        <div className="md:w-145 lg:w-full">
+            <Container fluid className="xs:mt-5">
+                <Row>
+                    <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">BİZDEN HABERLER</span>
+                </Row>
+                <Swiper slidesPerView={sm ? 1 : 3} spaceBetween={30} pagination={{ "clickable": true }}>
+                    {newsList.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="p-5">
+                                <Row>
+                                    <a href="#" className="flex">
+                                        <div>
+                                            <img src={item.img} className="transition hover:scale-50 ease-in" />
+                                        </div>
+                                    </a>
+                                </Row>
+                                <Row>
+                                    <div className="mt-3">
+                                        <span className="text-featureTextBlue font-Montserrat font-bold text-xl">{item.title}</span>
+                                    </div>
+                                </Row>
+                                <Row>
+                                    <div className="mt-3">
+                                        <p className="text-gray-600 font-Montserrat text-sm font-medium">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </Row>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </Container>
+        </div>
     )
 }
