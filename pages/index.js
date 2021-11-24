@@ -1,8 +1,7 @@
-import Head from 'next/head'
 import Features from '../components/features/features.js'
-import Navbar from '../components/navbar/navbar.js'
 import Navigation from '../components/navbar/navigation.js'
 import News from '../components/news/news.js'
+import BrandSlider from '../components/slider/brandSlider.js'
 import Slider from '../components/slider/slider.js'
 import Suggestion from '../components/suggestion/suggestion.js'
 
@@ -104,6 +103,110 @@ const suggestionList = [
     profileImg: '/suggestion_slider/huseyin-uslu.jpeg'
   }
 ]
+const brandList = [
+  {
+    name: 'aktifbank',
+    href: '#',
+    img: `brand_slider/aktifbank-logo.png`
+  },
+  {
+    name: 'alpet',
+    href: '#',
+    img: `brand_slider/alpet-logo.jpeg`
+  },
+  {
+    name: 'anadolusigorta',
+    href: '#',
+    img: `brand_slider/anadolusigorta-logo.jpeg`
+  },
+  {
+    name: 'barilla',
+    href: '#',
+    img: `brand_slider/barilla-logo.jpeg`
+  },
+  {
+    name: 'basidav',
+    href: '#',
+    img: `brand_slider/basidav-logo.jpeg`
+  },
+  {
+    name: 'bayındır',
+    href: '#',
+    img: `brand_slider/bayındır-logo.jpeg`
+  },
+  {
+    name: 'benetton',
+    href: '#',
+    img: `brand_slider/benetton-logo.jpeg`
+  },
+  {
+    name: 'erenholding',
+    href: '#',
+    img: `brand_slider/erenholding-logo.jpeg`
+  },
+  {
+    name: 'flo',
+    href: '#',
+    img: `brand_slider/flo-logo.jpeg`
+  },
+  {
+    name: 'goldenglobal',
+    href: '#',
+    img: `brand_slider/goldenglobal-logo.png`
+  },
+  {
+    name: 'grupflorence',
+    href: '#',
+    img: `brand_slider/grupflorence-logo.jpeg`
+  },
+  {
+    name: 'intercity',
+    href: '#',
+    img: `brand_slider/intercity-logo.jpeg`
+  },
+  {
+    name: 'isbankasi',
+    href: '#',
+    img: `brand_slider/isbankasi-logo.jpeg`
+  },
+  {
+    name: 'isfaktoring',
+    href: '#',
+    img: `brand_slider/isfaktoring-logo.png`
+  },
+  {
+    name: 'jotun',
+    href: '#',
+    img: `brand_slider/jotun-logo.jpeg`
+  },
+  {
+    name: 'kadoil',
+    href: '#',
+    img: `brand_slider/kadoil-logo.png`
+  },
+  {
+    name: 'kafaradyo',
+    href: '#',
+    img: `brand_slider/kafaradyo-logo.jpeg`
+  },
+  {
+    name: 'karel',
+    href: '#',
+    img: `brand_slider/karel-logo.jpeg`
+  },
+  {
+    name: 'radyoland',
+    href: '#',
+    img: `brand_slider/radyoland-logo.png`
+  },
+  {
+    name: 'senpilic',
+    href: '#',
+    img: `brand_slider/senpilic-logo.jpeg`
+  }
+
+
+]
 
 export default function Home() {
   return (
@@ -115,6 +218,7 @@ export default function Home() {
       <News contentList={newsList} headerText="BİZDEN HABERLER" />
       <News contentList={blogList} headerText="BLOG" />
       <Suggestion contentList={suggestionList} headerText="İŞNETLE ÇALIŞMAK" />
+      <BrandSlider contentList={brandList} />
     </div >
   )
 }
