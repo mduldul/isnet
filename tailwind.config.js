@@ -32,7 +32,8 @@ module.exports = {
         slider: '600px'
       },
       fontFamily: {
-        Montserrat: ['Montserrat']
+        Montserrat: ['Montserrat'],
+        WorkSans: ['Work Sans']
       },
       textColor: {
         'featureIconBlue': '#2574A9',
@@ -40,7 +41,10 @@ module.exports = {
       },
       backgroundColor: {
         'featureBgGray': '#f0f0f0',
-        'featureBgBlue': '#2574A9'
+        'featureBgBlue': '#2574A9',
+        'footerLightBlue': '#044A67',
+        'footerDarkBlue': '#04415b',
+        'footerLinkDarkBlue': '#193B53',
       }
     },
   },

@@ -1,4 +1,5 @@
 import Features from '../components/features/features.js'
+import Footer from '../components/footer/footer.js'
 import Navigation from '../components/navbar/navigation.js'
 import News from '../components/news/news.js'
 import BrandSlider from '../components/slider/brandSlider.js'
@@ -212,13 +213,16 @@ export default function Home() {
   return (
     <div>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       <Navigation />
       <Slider />
       <Features />
       <News contentList={newsList} headerText="BİZDEN HABERLER" />
       <News contentList={blogList} headerText="BLOG" />
       <Suggestion contentList={suggestionList} headerText="İŞNETLE ÇALIŞMAK" />
-      <BrandSlider contentList={brandList} />
+      <BrandSlider contentList={brandList} headerText="REFERANSLARIMIZ" />
+      <BrandSlider contentList={brandList} headerText="İŞ ORTAKLARIMIZ" />
+      <Footer />
     </div >
   )
 }
