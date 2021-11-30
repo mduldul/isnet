@@ -35,7 +35,7 @@ const useMediaQuery = (width) => {
     return targetReached;
 };
 
-export default function BrandSlider({ contentList,headerText }) {
+export default function BrandSlider({ contentList, headerText }) {
     const sm = useMediaQuery(425);
     return (
         <div className="md:w-145 lg:w-full">
@@ -43,11 +43,11 @@ export default function BrandSlider({ contentList,headerText }) {
                 <Row>
                     <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">{headerText}</span>
                 </Row>
-                <div className="w-full mx-auto">
+                <div className="w-full mx-auto pb-14">
                     <Swiper slidesPerView={sm ? 1 : 6} pagination={{ "clickable": true }} slidesPerGroup={sm ? 1 : 4} loop={true} autoplay={true}>
                         {contentList.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div className="w-60 pb-14">
+                                <div className="flex justify-center xs:pb-14">
                                     <a href={item.href} className="flex h-24">
                                         <img src={item.img} className="filter grayscale transition duration-500 hover:grayscale-0 bg-center bg-no-repeat bg-cover mx-auto" />
                                     </a>

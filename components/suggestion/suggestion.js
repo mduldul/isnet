@@ -17,7 +17,7 @@ export default function Suggestion({ contentList, headerText }) {
                 </Row>
                 <Swiper slidesPerView={1} spaceBetween={30} pagination={{ "clickable": true }}>
                     {contentList.map((item, index) => (
-                        <SwiperSlide key={index} className="mb-8">
+                        <SwiperSlide key={index} className="xs:m-0 mb-8">
                             <Grid.Container justify="center">
                                 <Grid sm={3} md={2}>
                                     <div className="pt-3 ml-5">
