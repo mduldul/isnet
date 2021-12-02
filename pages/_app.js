@@ -1,10 +1,13 @@
 import 'tailwindcss/tailwind.css'
 import { CssBaseline } from '@nextui-org/react';
+import Content from '../components/content/content';
 
 function MyApp({ Component, pageProps }) {
   return <>
-    <CssBaseline />
-    <Component {...pageProps} />
+    <Content>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </Content>
   </>
 }
 
