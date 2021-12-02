@@ -4,7 +4,7 @@ import { ImFacebook, ImTwitter, ImLinkedin, ImYoutube, ImInstagram } from 'react
 
 export default function Footer() {
     return (
-        <div className="md:w-145 lg:w-full">
+        <footer className="md:w-145 lg:w-full">
             <Container fluid className="bg-footerLightBlue">
                 <Grid.Container justify="flex-start">
                     <Grid sm={6} lg={3}>
@@ -211,6 +211,6 @@ export default function Footer() {
                     </Grid>
                 </Grid.Container>
             </Container>
-        </div>
+        </footer>
     )
 }

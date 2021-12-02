@@ -54,7 +54,7 @@ const hakkimizdaDropdown = [
     {
         name: 'Biz Kimiz ?',
         description: 'Kuruluşumuz hakkında en doğru ve güncel bilgilere bu sayfa altından ulaşabilirsiniz.',
-        href: '#',
+        href: '/bizkimiz',
         icon: IdentificationIcon,
     },
     {
