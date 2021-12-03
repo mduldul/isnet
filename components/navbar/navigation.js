@@ -60,7 +60,7 @@ const hakkimizdaDropdown = [
     {
         name: 'Teknolojik Altyapımız',
         description: 'İleri teknolojiye sahip yaygın ve güçlü bir altyapı için İşNet',
-        href: '#',
+        href: '/teknolojikaltyapimiz',
         icon: DesktopComputerIcon,
     },
     {
