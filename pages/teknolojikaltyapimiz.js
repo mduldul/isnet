@@ -86,7 +86,7 @@ const TeknolojikAltyapimiz = ({ props }) => {
                         </div>
                     </Grid>
                     <Grid xs={12} md={12}>
-                        <div className="mt-4">
+                        <div className="mt-4 w-full">
                             <Row>
                                 <h4 className="text-featureTextBlue font-Montserrat text-xl">Yönetim Sistemleri Politikamız</h4>
                             </Row>
@@ -204,7 +204,7 @@ const TeknolojikAltyapimiz = ({ props }) => {
                                 </ul>
                             </div>
                             <Row>
-                                <ul className="inline-flex space-x-5 py-5">
+                                <ul className="inline-flex ml-0 space-x-5 py-5 w-full">
                                     <li className="w-40">
                                         <a href="https://www.isnet.net.tr/img/ISO-9001-Logo.jpg">
                                             <img src="https://www.isnet.net.tr/img/mavi-1.png" />
