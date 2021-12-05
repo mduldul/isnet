@@ -227,7 +227,7 @@ export default function Navigation() {
                         <a href="/">
                             <span className="sr-only">İşnet</span>
                             <img
-                                className="h-8 min-w-max sm:h-10"
+                                className="h-8 sm:h-10"
                                 src="/isnet_logo.png"
                                 alt="işnet"
                             />
