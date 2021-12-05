@@ -6,6 +6,7 @@ import SwiperCore, { Pagination } from 'swiper';
 
 import "swiper/css";
 import "swiper/css/pagination"
+import Title from "../title/title";
 
 SwiperCore.use([Pagination]);
 
@@ -38,11 +39,9 @@ const useMediaQuery = (width) => {
 export default function BrandSlider({ contentList, headerText }) {
     const sm = useMediaQuery(425);
     return (
-        <div className="md:w-145 lg:w-full">
+        <div>
             <Container fluid className="xs:mt-5">
-                <Row>
-                    <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">{headerText}</span>
-                </Row>
+                <Title TitleText={headerText} />
                 <div className="w-full mx-auto pb-14">
                     <Swiper slidesPerView={sm ? 1 : 6} pagination={{ "clickable": true }} slidesPerGroup={sm ? 1 : 4} loop={true} autoplay={true}>
                         {contentList.map((item, index) => (

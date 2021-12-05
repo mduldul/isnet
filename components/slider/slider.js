@@ -65,7 +65,7 @@ export default function Slider() {
     ]
     return (
         <>
-            <Swiper cssMode={true} navigation={true} loop={true} pagination={{ "clickable": true }} className="lg:w-full md:w-145 z-0">
+            <Swiper cssMode={true} navigation={true} loop={true} pagination={{ "clickable": true }} className="z-0">
                 {sliderList.map((value, index, arr) => (
                     <SwiperSlide key={value.Id} >
                         <div className={classNames("w-full flex h-slider bg-cover bg-no-repeat bg-center", value.bg)}>

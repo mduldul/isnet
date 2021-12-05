@@ -25,7 +25,7 @@ const featureList = [
 ]
 export default function Features() {
     return (
-        <div className="md:w-145 lg:w-full">
+        <div>
             <Grid.Container>
                 {featureList.map((item) => (
                     <Grid lg={3} md={6} sm={6} justify="center" key={item.name}>

@@ -5,16 +5,15 @@ import SwiperCore, { Pagination } from 'swiper';
 
 import "swiper/css";
 import "swiper/css/pagination"
+import Title from "../title/title";
 
 SwiperCore.use([Pagination]);
 
 export default function Suggestion({ contentList, headerText }) {
     return (
-        <div className="md:w-145 lg:w-full">
+        <div>
             <Container fluid className="xs:mt-5">
-                <Row>
-                    <span className="text-featureTextBlue font-bold text-xl font-Montserrat ml-4 lg:after:w-10/12 lg:after:bg-gray-200 lg:after:h-1 lg:after:absolute lg:after:mt-3 after:ml-8">{headerText}</span>
-                </Row>
+                <Title TitleText={headerText} />
                 <Swiper slidesPerView={1} spaceBetween={30} pagination={{ "clickable": true }}>
                     {contentList.map((item, index) => (
                         <SwiperSlide key={index} className="xs:m-0 mb-8">
