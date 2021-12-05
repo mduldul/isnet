@@ -66,7 +66,7 @@ const hakkimizdaDropdown = [
     {
         name: 'İnsan Kaynakları',
         description: "Gelişmekte olan bilişim sektöründe, İşNet ailesinin bir üyesi olamk ister misiniz?",
-        href: '#',
+        href: '/insankaynaklari',
         icon: UserGroupIcon
     },
     {
@@ -222,7 +222,6 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-0">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 lg:justify-end xl:justify-end md:justify-between lg:space-x-10">
                     {/* İŞNET LOGO */}
-
                     <div className="justify-start lg:w-0 lg:flex-1">
                         <a href="/">
                             <span className="sr-only">İşnet</span>
@@ -239,7 +238,6 @@ export default function Navigation() {
                             <MenuIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                     </div>
-
                     <Popover.Group as="nav" className="hidden lg:flex xl:space-x-10 lg:space-x-2">
                         {/* HAKKIMIZDA */}
                         <Popover className="relative">
