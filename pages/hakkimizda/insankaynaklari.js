@@ -1,15 +1,15 @@
 import { Fragment, useRef, useState } from 'react'
-import Title from '../components/title/title'
-import BreadCrumb from '../components/breadcrumb/breadcrumb'
-import UploadModal from '../components/modal/uploadmodal'
-import CvModal from '../components/modal/cvmodal'
+import Title from '../../components/title/title'
+import BreadCrumb from '../../components/breadcrumb/breadcrumb'
+import UploadModal from '../../components/modal/uploadmodal'
+import CvModal from '../../components/modal/cvmodal'
 
 export default function InsanKaynaklari() {
     const [open, setOpen] = useState(false)
     const [cvopen, setcvOpen] = useState(false)
     return (
         <div>
-            <BreadCrumb pageName="İnsan Kaynakları" pageRoute="/insankaynaklari" />
+            <BreadCrumb pageName="İnsan Kaynakları" pageRoute="/hakkimizda/insankaynaklari" />
             <Title TitleText="İnsan Kaynakları" />
             <div className="relative bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto">

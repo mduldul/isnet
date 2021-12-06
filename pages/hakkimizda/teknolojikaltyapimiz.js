@@ -1,6 +1,6 @@
 import { Container, Grid, Row } from '@nextui-org/react'
-import BreadCrumb from '../components/breadcrumb/breadcrumb'
-import Title from '../components/title/title'
+import BreadCrumb from '../../components/breadcrumb/breadcrumb'
+import Title from '../../components/title/title'
 import { BadgeCheckIcon } from '@heroicons/react/solid'
 
 const teknolojikaltyapimizList = [
@@ -26,7 +26,7 @@ const teknolojikaltyapimizList = [
 const TeknolojikAltyapimiz = ({ props }) => {
     return (
         <div {...props}>
-            <BreadCrumb pageName="Teknolojik Altyapımız" pageRoute="teknolojikaltyapimiz" />
+            <BreadCrumb pageName="Teknolojik Altyapımız" pageRoute="/hakkimizda/teknolojikaltyapimiz" />
             <Title TitleText="TEKNOLOJİK ALTYAPIMIZ" />
             <Container fluid>
                 <Grid.Container>

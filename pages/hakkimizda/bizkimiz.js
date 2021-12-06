@@ -1,6 +1,6 @@
 import { Container, Grid, Row } from '@nextui-org/react'
-import BreadCrumb from '../components/breadcrumb/breadcrumb'
-import Title from '../components/title/title'
+import BreadCrumb from '../../components/breadcrumb/breadcrumb'
+import Title from '../../components/title/title'
 
 const bizkimizList = [
     {
@@ -26,7 +26,7 @@ const bizkimizList = [
 const BizKimiz = () => {
     return (
         <div>
-            <BreadCrumb pageName="Biz Kimiz ↓" pageRoute="/bizkimiz" />
+            <BreadCrumb pageName="Biz Kimiz ↓" pageRoute="/hakkimizda/bizkimiz" />
             <Container fluid>
                 <Title TitleText="Biz Kimiz ?" />
                 <Grid.Container>
