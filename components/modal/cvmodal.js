@@ -50,7 +50,7 @@ const CvModal = ({ isOpen }) => {
                                         <Tab.Group>
                                             <div>
                                                 <Tab.List>
-                                                    <div className="mx-0 pt-4">
+                                                    <div className="mx-0 pt-4 xs:px-4 md:px-0">
                                                         <div className="flex items-center justify-between">
                                                             <Tab>
                                                                 <div className="flex items-center text-blue-500 relative">
@@ -104,7 +104,7 @@ const CvModal = ({ isOpen }) => {
                                                         <form action="#" method="POST">
                                                             <div className="px-4 md:pt-10 bg-white sm:p-6">
                                                                 <div className="grid grid-cols-6 gap-6">
-                                                                    <div className="col-span-6 sm:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-6 xs:col-span-12">
                                                                         <input
                                                                             type="text"
                                                                             name="first-name"
@@ -113,7 +113,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="col-span-6 sm:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-6 xs:col-span-6">
                                                                         <input
                                                                             type="text"
                                                                             name="last-name"
@@ -123,7 +123,7 @@ const CvModal = ({ isOpen }) => {
                                                                         />
                                                                     </div>
 
-                                                                    <div className="col-span-6 sm:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-6 xs:col-span-6">
                                                                         <input
                                                                             type="text"
                                                                             name="email-address"
@@ -133,7 +133,7 @@ const CvModal = ({ isOpen }) => {
                                                                         />
                                                                     </div>
 
-                                                                    <div className="col-span-6 sm:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-6 xs:col-span-12">
                                                                         <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                                             Uyruk
                                                                         </label>
@@ -148,7 +148,7 @@ const CvModal = ({ isOpen }) => {
                                                                         </select>
                                                                     </div>
 
-                                                                    <div className="col-span-6">
+                                                                    <div className="lg:col-span-12 sm:col-span-6 xs:col-span-12">
                                                                         <input
                                                                             type="text"
                                                                             name="street-address"
@@ -157,7 +157,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="col-span-6 lg:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-6 xs:col-span-12">
                                                                         <input
                                                                             type="text"
                                                                             name="city"
@@ -166,9 +166,9 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="col-span-6 lg:col-span-3">
+                                                                    <div className="lg:col-span-6 sm:col-span-3 xs:col-span-12">
                                                                         <input
-                                                                            type="text"
+                                                                            type="date"
                                                                             name="region"
                                                                             id="region"
                                                                             placeholder="Doğum Tarihi"
@@ -235,21 +235,24 @@ const CvModal = ({ isOpen }) => {
                                                         <form action="#" method="POST">
                                                             <div className="px-4 bg-white md:p-0 sm:p-6">
                                                                 <div className="grid grid-cols-6 gap-8">
-                                                                    <div className="md:col-span-12 sm:col-span-3">
+                                                                    <div className="md:col-span-12 sm:col-span-6 xs:col-span-12">
+                                                                        <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                                                                            Öğrenim Durumu
+                                                                        </label>
                                                                         <select
                                                                             id="country"
                                                                             name="country"
                                                                             autoComplete="country-name"
+                                                                            placeholder="Seçiniz"
                                                                             className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                                                         >
-                                                                            <option>Öğrenim Durumu</option>
                                                                             <option>Lisans</option>
                                                                             <option>Ön Lisans</option>
                                                                             <option>Lise</option>
                                                                             <option>İlköğretim</option>
                                                                         </select>
                                                                     </div>
-                                                                    <div className="md:col-span-6 sm:col-span-3">
+                                                                    <div className="md:col-span-6 sm:col-span-3 xs:col-span-12">
                                                                         <input
                                                                             type="text"
                                                                             name="first-name"
@@ -258,7 +261,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="md:col-span-6 sm:col-span-3">
+                                                                    <div className="md:col-span-6 sm:col-span-3 xs:col-span-12">
                                                                         <input
                                                                             type="text"
                                                                             name="first-name"
@@ -267,7 +270,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="md:col-span-6 sm:col-span-3">
+                                                                    <div className="md:col-span-6 sm:col-span-3 xs:col-span-12">
                                                                         <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                                             Başlangıç Tarihi
                                                                         </label>
@@ -279,7 +282,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="md:col-span-6 sm:col-span-3">
+                                                                    <div className="md:col-span-6 sm:col-span-3 xs:col-span-12">
                                                                         <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                                             Mezuniyet Tarihi
                                                                         </label>
@@ -304,7 +307,7 @@ const CvModal = ({ isOpen }) => {
                                                         <form action="#" method="POST">
                                                             <div className="px-4 bg-white md:p-0 sm:p-6">
                                                                 <div className="grid grid-cols-6 gap-6">
-                                                                    <div className="md:col-span-3 sm:col-span-3">
+                                                                    <div className="md:col-span-3 sm:col-span-3 xs:col-span-6">
                                                                         <input
                                                                             type="text"
                                                                             name="first-name"
@@ -313,16 +316,7 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="md:col-span-3 sm:col-span-3">
-                                                                        <input
-                                                                            type="text"
-                                                                            name="first-name"
-                                                                            placeholder="İşyerinin Adı"
-                                                                            id="first-name"
-                                                                            className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                                                        />
-                                                                    </div>
-                                                                    <div className="md:col-span-3 sm:col-span-3">
+                                                                    <div className="md:col-span-3 sm:col-span-3 xs:col-span-6">
                                                                         <input
                                                                             type="text"
                                                                             name="first-name"
@@ -331,7 +325,16 @@ const CvModal = ({ isOpen }) => {
                                                                             className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                                         />
                                                                     </div>
-                                                                    <div className="md:col-span-3 sm:col-span-3">
+                                                                    <div className="md:col-span-3 sm:col-span-3 xs:col-span-12">
+                                                                        <input
+                                                                            type="text"
+                                                                            name="first-name"
+                                                                            placeholder="İşyerinin Adı"
+                                                                            id="first-name"
+                                                                            className="mt-3 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                                        />
+                                                                    </div>
+                                                                    <div className="md:col-span-3 sm:col-span-3 xs:col-span-12">
                                                                         <input
                                                                             type="tel"
                                                                             name="first-name"
