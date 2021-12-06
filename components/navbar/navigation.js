@@ -54,31 +54,31 @@ const hakkimizdaDropdown = [
     {
         name: 'Biz Kimiz ?',
         description: 'Kuruluşumuz hakkında en doğru ve güncel bilgilere bu sayfa altından ulaşabilirsiniz.',
-        href: '/bizkimiz',
+        href: '/hakkimizda/bizkimiz',
         icon: IdentificationIcon,
     },
     {
         name: 'Teknolojik Altyapımız',
         description: 'İleri teknolojiye sahip yaygın ve güçlü bir altyapı için İşNet',
-        href: '/teknolojikaltyapimiz',
+        href: '/hakkimizda/teknolojikaltyapimiz',
         icon: DesktopComputerIcon,
     },
     {
         name: 'İnsan Kaynakları',
         description: "Gelişmekte olan bilişim sektöründe, İşNet ailesinin bir üyesi olamk ister misiniz?",
-        href: '/insankaynaklari',
+        href: '/hakkimizda/insankaynaklari',
         icon: UserGroupIcon
     },
     {
         name: 'Bizden Haberler',
         description: "Basında İşNet hakkında yer alan haberlere buradan ulaşabilirsiniz.",
-        href: '#',
+        href: '/hakkimizda/bizdenhaberler',
         icon: NewspaperIcon,
     },
     {
         name: 'İş Ortaklarımız',
         description: `İşNet'in ayrıcalıklarından faydalanan firmalarımız`,
-        href: '#',
+        href: '/hakkimizda/isortaklarimiz',
         icon: BriefcaseIcon,
     },
 ]
