@@ -217,6 +217,6 @@ export default function Home() {
       <Suggestion contentList={suggestionList} headerText="İŞNETLE ÇALIŞMAK" />
       <BrandSlider contentList={brandList} headerText="REFERANSLARIMIZ" />
       <BrandSlider contentList={brandList} headerText="İŞ ORTAKLARIMIZ" />
-    </div >
+    </div>
   )
 }

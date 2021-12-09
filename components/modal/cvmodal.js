@@ -9,6 +9,10 @@ function classNames(...classes) {
 
 const CvModal = ({ isOpen }) => {
     const cancelButtonRef = useRef(null)
+    const [index, setIndex] = useState(0)
+    const handleIndex = (index) => {
+        setIndex(index);
+    }
     return (
         <Transition.Root
             show={true}
@@ -47,51 +51,83 @@ const CvModal = ({ isOpen }) => {
                                         <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
                                             Özgeçmiş Doldur
                                         </Dialog.Title>
-                                        <Tab.Group>
+                                        <Tab.Group onChange={(index) => handleIndex(index)}>
                                             <div>
                                                 <Tab.List>
                                                     <div className="mx-0 pt-4 xs:px-4 md:px-0">
                                                         <div className="flex items-center justify-between">
                                                             <Tab>
-                                                                <div className="flex items-center text-blue-500 relative">
-                                                                    <div className="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-blue-500">
-                                                                        <UserIcon className="w-6 h-6 mx-auto" />
-                                                                    </div>
-                                                                    <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-blue-500">
-                                                                        Kişisel Bilgiler
-                                                                    </div>
-                                                                </div>
-                                                            </Tab>
-                                                            <Tab>
-                                                                <div className="flex items-center text-white relative">
-                                                                    <div className="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 bg-blue-500 border-blue-500">
-                                                                        <UserIcon className="w-6 h-6 mx-auto" />
-                                                                    </div>
-                                                                    <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-blue-500">
-                                                                        Yabancı Dil
-                                                                    </div>
-                                                                </div>
-                                                            </Tab>
-                                                            <Tab>
-                                                                <div className="flex items-center text-gray-500 relative">
-                                                                    <div className="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
-                                                                        <UserIcon className="w-6 h-6 mx-auto" />
-                                                                    </div>
-                                                                    <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-gray-500">
-                                                                        Eğitim
-                                                                    </div>
-                                                                </div>
+                                                                {({ selected }) => (
+                                                                    <div className={classNames('flex items-center relative',
+                                                                        selected ? 'text-white' : index >= 0 ? 'text-gray-500' : 'text-blue-500'
+                                                                    )}>
+                                                                        <div className={classNames("rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ",
+                                                                            selected ? 'border-white bg-blue-500' : index >= 0 ? 'border-gray-300 bg-white' : 'border-blue-500 bg-white'
+                                                                        )}>
+                                                                            <UserIcon className="w-6 h-6 mx-auto" />
+                                                                        </div>
+                                                                        <div className={classNames("absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase",
+                                                                            selected ? 'text-blue-500' : index >= 0 ? 'text-gray-500' : 'text-blue-500'
 
+                                                                        )}>
+                                                                            Kişisel Bilgiler
+                                                                        </div>
+                                                                    </div>
+                                                                )}
                                                             </Tab>
                                                             <Tab>
-                                                                <div className="flex items-center text-gray-500 relative">
-                                                                    <div className="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
-                                                                        <UserIcon className="w-6 h-6 mx-auto" />
+                                                                {({ selected }) => (
+                                                                    <div className={classNames('flex items-center relative',
+                                                                        selected ? 'text-white' : index >= 1 ? 'text-gray-500' : 'text-blue-500'
+                                                                    )}>
+                                                                        <div className={classNames("rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ",
+                                                                            selected ? 'border-white bg-blue-500' : index >= 1 ? 'border-gray-300 bg-white' : 'border-blue-500 bg-white'
+                                                                        )}>
+                                                                            <UserIcon className="w-6 h-6 mx-auto" />
+                                                                        </div>
+                                                                        <div className={classNames("absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase",
+                                                                            selected ? 'text-blue-500' : index >= 1 ? 'text-gray-500' : 'text-blue-500'
+                                                                        )}>
+                                                                            Yabancı Dil
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-gray-500">
-                                                                        İş Tecrübeleri
+                                                                )}
+                                                            </Tab>
+                                                            <Tab>
+                                                                {({ selected }) => (
+                                                                    <div className={classNames('flex items-center relative',
+                                                                        selected ? 'text-white' : index >= 2 ? 'text-gray-500' : 'text-blue-500'
+                                                                    )}>
+                                                                        <div className={classNames("rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ",
+                                                                            selected ? 'border-white bg-blue-500' : index >= 2 ? 'border-gray-300 bg-white' : 'border-blue-500 bg-white'
+                                                                        )}>
+                                                                            <UserIcon className="w-6 h-6 mx-auto" />
+                                                                        </div>
+                                                                        <div className={classNames("absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase",
+                                                                            selected ? 'text-blue-500' : index >= 2 ? 'text-gray-500' : 'text-blue-500'
+                                                                        )}>
+                                                                            Eğitim
+                                                                        </div>
                                                                     </div>
-                                                                </div>
+                                                                )}
+                                                            </Tab>
+                                                            <Tab>
+                                                                {({ selected }) => (
+                                                                    <div className={classNames('flex items-center relative',
+                                                                        selected ? 'text-white' : index >= 3 ? 'text-gray-500' : 'text-blue-500'
+                                                                    )}>
+                                                                        <div className={classNames("rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ",
+                                                                            selected ? 'border-white bg-blue-500' : index >= 3 ? 'border-gray-300 bg-white' : 'border-blue-500 bg-white'
+                                                                        )}>
+                                                                            <UserIcon className="w-6 h-6 mx-auto" />
+                                                                        </div>
+                                                                        <div className={classNames("absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase",
+                                                                            selected ? 'text-blue-500' : index >= 3 ? 'text-gray-500' : 'text-blue-500'
+                                                                        )}>
+                                                                            İş Tecrübeleri
+                                                                        </div>
+                                                                    </div>
+                                                                )}
                                                             </Tab>
                                                         </div>
                                                     </div>
@@ -371,11 +407,11 @@ const CvModal = ({ isOpen }) => {
                                     Vazgeç
                                 </button>
                             </div>
-                        </div>
-                    </Transition.Child>
-                </div>
-            </Dialog>
-        </Transition.Root>
+                        </div >
+                    </Transition.Child >
+                </div >
+            </Dialog >
+        </Transition.Root >
     )
 }
 

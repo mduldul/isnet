@@ -65,6 +65,19 @@ const news = [
         img: '/brand_slider/kadoil-logo.png',
         author: 'İşNet',
         date: '07.10.2019'
+    },
+    {
+        id: 7,
+        title: 'İşNet KVKK Çalışmalarında Entegre Hizmet Veriyor',
+        content: `Kişisel Verilerin Korunması Kanunu birçok şirket 
+        için yeni bir dönemin başlangıcı olacak. Kanun kapsamında 
+        belirtilen veri güvenliğine yönelik teknik ve idari tedbirler 
+        alınmadığında; kurumlara ciddi yaptırımlar gelebiliyor. 
+        Bu alanda uçtan uca ve birbirini tamamlar nitelikte hizmet veren İşNet, 
+        kurumların Kanuna uyumu için destek veriyor.`,
+        img: '/blog_slider/dijitallesme-trendi-blog.png',
+        author: 'İşNet',
+        date: '03.03.2020'
     }
 ]
 
@@ -78,8 +91,8 @@ const BizdenHaberler = () => {
                 <div className="mb-5">
                     {
                         news?.slice(
-                            (page - 1) * 2,
-                            page * 2
+                            (page - 1) * 4,
+                            page * 4
                         ).map((item, index) => (
                             <div className="flex flex-col md:flex-row overflow-hidden bg-white rounded-lg shadow-2xl mt-4 w-100 mx-2" key={index}>
                                 <div className="h-64 w-auto md:w-1/2">
@@ -103,7 +116,7 @@ const BizdenHaberler = () => {
             </Container>
             <div className="my-5">
                 <center>
-                    <Pagination total={3} initialPage={1} size="xlarge" page={page} onChange={(page) => setPage(page)} />
+                    <Pagination total={2} initialPage={1} size="xlarge" page={page} onChange={(page) => setPage(page)} />
                 </center>
             </div>
         </div>
