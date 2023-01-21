@@ -1,7 +1,3 @@
-# isnet.net.tr
+# Company Clone
 
-Bu proje isnet web sitesinin next.js ve tailwindcss kullanılarak yapılan projedir.
-
-## Önizleme
-
-Projenin İlk MVP örneği => [Isnet](https://isnet.vercel.app):
+Bu proje Company web sitesinin next.js ve tailwindcss kullanılarak yapılan projedir.
